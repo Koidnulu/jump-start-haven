@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://5yy1upqj0giu"
-path="res://.godot/imported/Other_Decorations_Free.png-0297757a2a4fcb1c84f1ab0c8ba68f52.ctex"
+uid="uid://dsoml6l8pkb3r"
+path="res://.godot/imported/BG_1.png-29286ba925da0134d583f5928859c787.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Tiny_Metroidvania_8x8_Free/Other_Decorations_Free.png"
-dest_files=["res://.godot/imported/Other_Decorations_Free.png-0297757a2a4fcb1c84f1ab0c8ba68f52.ctex"]
+source_file="res://assets/Fantasy Swamp Forest/Free/BG_1/BG_1.png"
+dest_files=["res://.godot/imported/BG_1.png-29286ba925da0134d583f5928859c787.ctex"]
 
 [params]
 

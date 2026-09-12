@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dehe5qaf1e4gq"
-path="res://.godot/imported/Grass_Tileset_Free.png-e76599ef82d396532e200dfc52d819d3.ctex"
+uid="uid://d2bbe0ayo3jq3"
+path="res://.godot/imported/Terrain_and_Props.png-a8d70f8b9ff6ab1b2b29bde08714f14f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Tiny_Metroidvania_8x8_Free/Grass_Tileset_Free.png"
-dest_files=["res://.godot/imported/Grass_Tileset_Free.png-e76599ef82d396532e200dfc52d819d3.ctex"]
+source_file="res://assets/Fantasy Swamp Forest/Free/Terrain_and_Props.png"
+dest_files=["res://.godot/imported/Terrain_and_Props.png-a8d70f8b9ff6ab1b2b29bde08714f14f.ctex"]
 
 [params]
 
