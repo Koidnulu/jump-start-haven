@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://dsoml6l8pkb3r" path="res://assets/Fantasy Swamp Forest/Free/BG_1/BG_1.png" id="3_eow3j"]
 [ext_resource type="Texture2D" uid="uid://d2bbe0ayo3jq3" path="res://assets/Fantasy Swamp Forest/Free/Terrain_and_Props.png" id="4_j5wjh"]
 [ext_resource type="PackedScene" uid="uid://dxahkv61gr2da" path="res://scenes/main_character.tscn" id="5_vef74"]
+[ext_resource type="PackedScene" uid="uid://br74wei22p2bm" path="res://dying.tscn" id="6_p57ef"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hve3p"]
 texture = ExtResource("1_7jktm")
@@ -884,6 +885,8 @@ texture = ExtResource("4_j5wjh")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_215e1")
 
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_axvsh"]
+
 [node name="Node2D" type="Node2D" unique_id=518446466]
 
 [node name="background" type="TileMapLayer" parent="." unique_id=147495811]
@@ -916,3 +919,9 @@ limit_left = -1415
 limit_top = 242
 limit_right = 242
 limit_bottom = 639
+
+[node name="dying" parent="." unique_id=321411134 instance=ExtResource("6_p57ef")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="dying" unique_id=1979697451]
+position = Vector2(-1146, 678)
+shape = SubResource("WorldBoundaryShape2D_axvsh")
