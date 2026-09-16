@@ -1,0 +1,101 @@
+[gd_scene format=3 uid="uid://bn1p5ctwa5y0u"]
+
+[ext_resource type="Script" uid="uid://bbtdhyf13h7st" path="res://enemy.gd" id="1_qi2p4"]
+[ext_resource type="Texture2D" uid="uid://b2yma3t5nek0v" path="res://assets/Mushroom/Mushroom with VFX/Mushroom-Run.png" id="2_iifgy"]
+[ext_resource type="PackedScene" uid="uid://br74wei22p2bm" path="res://dying.tscn" id="2_qi2p4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_epg4t"]
+atlas = ExtResource("2_iifgy")
+region = Rect2(0, 0, 80, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3yqyl"]
+atlas = ExtResource("2_iifgy")
+region = Rect2(80, 0, 80, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wujgv"]
+atlas = ExtResource("2_iifgy")
+region = Rect2(160, 0, 80, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hb8ge"]
+atlas = ExtResource("2_iifgy")
+region = Rect2(240, 0, 80, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e1ltt"]
+atlas = ExtResource("2_iifgy")
+region = Rect2(320, 0, 80, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dxifv"]
+atlas = ExtResource("2_iifgy")
+region = Rect2(400, 0, 80, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pwjut"]
+atlas = ExtResource("2_iifgy")
+region = Rect2(480, 0, 80, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n0g06"]
+atlas = ExtResource("2_iifgy")
+region = Rect2(560, 0, 80, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bwanj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_epg4t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3yqyl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wujgv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hb8ge")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e1ltt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dxifv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pwjut")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n0g06")
+}],
+"loop": 1,
+"name": &"run",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bwanj"]
+radius = 12.0
+
+[node name="mushroom" type="Node2D" unique_id=1651497278]
+script = ExtResource("1_qi2p4")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1106483845]
+sprite_frames = SubResource("SpriteFrames_bwanj")
+animation = &"run"
+autoplay = "run"
+
+[node name="dying" parent="." unique_id=321411134 instance=ExtResource("2_qi2p4")]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="dying" unique_id=575791811]
+position = Vector2(0, 15)
+shape = SubResource("CircleShape2D_bwanj")
+
+[node name="raycast_left" type="RayCast2D" parent="." unique_id=658335554]
+visible = false
+position = Vector2(0, 15)
+target_position = Vector2(-19, 0)
+
+[node name="raycast_right" type="RayCast2D" parent="." unique_id=729755145]
+visible = false
+position = Vector2(0, 15)
+target_position = Vector2(19, 0)
+
+[node name="RayCast2D" type="RayCast2D" parent="." unique_id=531772894]
+position = Vector2(-26, 21)
