@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://bn1p5ctwa5y0u"]
 
-[ext_resource type="Script" uid="uid://bbtdhyf13h7st" path="res://enemy.gd" id="1_qi2p4"]
+[ext_resource type="Script" uid="uid://bbtdhyf13h7st" path="res://scripts/enemy.gd" id="1_qi2p4"]
 [ext_resource type="Texture2D" uid="uid://b2yma3t5nek0v" path="res://assets/Mushroom/Mushroom with VFX/Mushroom-Run.png" id="2_iifgy"]
-[ext_resource type="PackedScene" uid="uid://br74wei22p2bm" path="res://dying.tscn" id="2_qi2p4"]
+[ext_resource type="PackedScene" uid="uid://br74wei22p2bm" path="res://scenes/dying.tscn" id="2_qi2p4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_epg4t"]
 atlas = ExtResource("2_iifgy")
@@ -81,7 +81,7 @@ autoplay = "run"
 
 [node name="dying" parent="." unique_id=321411134 instance=ExtResource("2_qi2p4")]
 collision_layer = 2
-collision_mask = 2
+collision_mask = 6
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="dying" unique_id=575791811]
 position = Vector2(0, 15)

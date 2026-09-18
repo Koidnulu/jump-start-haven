@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dxahkv61gr2da"]
 
-[ext_resource type="Script" uid="uid://cvgvmwvbw02q1" path="res://scenes/main_character.gd" id="1_e6tc2"]
+[ext_resource type="Script" uid="uid://cvgvmwvbw02q1" path="res://scripts/main_character.gd" id="1_e6tc2"]
 [ext_resource type="Texture2D" uid="uid://dckfcsig0b85i" path="res://assets/individual_sheets/male_hero-idle.png" id="1_tqm6u"]
 [ext_resource type="Texture2D" uid="uid://tt2fpm7e23d4" path="res://assets/individual_sheets/male_hero-jump.png" id="2_e6tc2"]
 [ext_resource type="Texture2D" uid="uid://hsq7t18eifaw" path="res://assets/individual_sheets/male_hero-run.png" id="3_k0aba"]
@@ -208,6 +208,7 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_bwanj"]
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=881599255]
+collision_layer = 5
 script = ExtResource("1_e6tc2")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1347449223]

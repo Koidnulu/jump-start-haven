@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://ca87rb25gs2o1"]
 
-[ext_resource type="Script" uid="uid://doa2qorar8pb1" path="res://coin.gd" id="1_0t63x"]
+[ext_resource type="Script" uid="uid://doa2qorar8pb1" path="res://scripts/coin.gd" id="1_0t63x"]
 [ext_resource type="Texture2D" uid="uid://bwta78pif642q" path="res://assets/coin1_16x16.png" id="1_d5gmh"]
+[ext_resource type="AudioStream" uid="uid://bfu1ht4h5ix14" path="res://sounds/49447089-game-start-317318.mp3" id="3_11l1o"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0t63x"]
 atlas = ExtResource("1_d5gmh")
@@ -145,6 +146,18 @@ tracks/1/keys = {
 "update": 1,
 "values": [false]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AudioStreamPlayer2D:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 1,
+"values": []
+}
 
 [sub_resource type="Animation" id="Animation_v7riw"]
 resource_name = "pickup"
@@ -155,7 +168,7 @@ tracks/0/path = NodePath("AnimatedSprite2D:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0.100000024),
+"times": PackedFloat32Array(0.06666667),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [false]
@@ -167,7 +180,7 @@ tracks/1/path = NodePath("CollisionShape2D:disabled")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0.100000024),
+"times": PackedFloat32Array(0.03333333),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [true]
@@ -186,6 +199,18 @@ tracks/2/keys = {
 "method": &"queue_free"
 }]
 }
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AudioStreamPlayer2D:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_pdq0q"]
 _data = {
@@ -194,6 +219,7 @@ _data = {
 }
 
 [node name="Area2D" type="Area2D" unique_id=571172400]
+collision_mask = 4
 script = ExtResource("1_0t63x")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1581643585]
@@ -206,5 +232,9 @@ shape = SubResource("CircleShape2D_axvsh")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1358216997]
 libraries/ = SubResource("AnimationLibrary_pdq0q")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1659384337]
+stream = ExtResource("3_11l1o")
+bus = &"sound effect"
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
