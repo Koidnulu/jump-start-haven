@@ -6,3 +6,6 @@
 - [coins](https://totuslotus.itch.io/pixel-coins) from TotusLotus
 - [background & tileset](https://theflavare.itch.io/forest-nature-fantasy-tileset) by The Flavare
 - Sound effects and music from Pixabay
+
+## Play here!
+[link to itch](https://koidnulu.itch.io/haven-jump-start)
